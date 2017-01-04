@@ -1,0 +1,104 @@
+.testimonials {
+    width: 100%;
+    @include clearfix;
+    margin-bottom: 8%;
+}
+
+.testimonials-desc {
+    width: 50%;
+    float: left;
+    padding-right: 20%;
+    background: url("../img/shape.png") no-repeat;
+    background-position: bottom;
+    @include respond-to($tablet-portrait) {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+}
+
+.standart-btn-testimonials {
+    float: none;
+    width: 42%;
+}
+
+.testimonials-desc__text,
+.testimonials-desc__title {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 12%;
+}
+
+.testimonials-video {
+    height: 400px;
+    width: 50%;
+    float: left;
+    @include respond-to($tablet-portrait) {
+        width: 100%;
+    }
+}
+
+.video-frame {
+    position: relative;
+    height: 80%;
+    overflow: hidden;
+}
+
+.video-desc {
+    height: 20%;
+    position: relative;
+    padding: 0 5%;
+    background: $dark-gray;
+}
+
+.video-desc-wrapper {
+    @include vertical-align;
+    @include clearfix;
+}
+
+.video-desc-wrapper__title {
+    font-size: 16px;
+    float: left;
+}
+
+.rate-block {
+    float: right;
+    @include clearfix;
+}
+
+.rate-block__icon {
+    color: $gray-yellow;
+    margin-right: 10px;
+    float: left;
+}
+
+.rate-block__rating {
+    font-weight: 800;
+    float: left;
+}
+
+.video-frame__player {
+    width: 100%;
+    height: auto;
+}
+
+.video-frame__playpause {
+    background: $gray-yellow;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    margin: auto;
+
+    &::after {
+        display: block;
+        width: 80px;
+        height: 80px;
+        content: '';
+        background: url('../img/iconplay.png') center no-repeat;
+    }
+}

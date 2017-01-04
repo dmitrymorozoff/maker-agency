@@ -1,0 +1,143 @@
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 670px;
+    background: url('../img/bg.png');
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+.header-body {
+    margin-top: 80px;
+    @include clearfix;
+}
+
+.header-body__title {
+    font-size: 42px;
+    line-height: 56px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.header-body__text {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    float: left;
+    margin-top: 35px;
+    letter-spacing: 1px;
+    color: $gray;
+}
+
+.header-body__btn {
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 50px;
+    display: block;
+    float: right;
+    width: 195px;
+    height: 50px;
+    margin-top: 3%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $dark-gray;
+    border-radius: 4px;
+    background: $gray-yellow;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .2);
+}
+/*******MENU*******/
+.nav {
+    @include clearfix;
+}
+
+.nav-logo {
+    line-height: 80px;
+    float: left;
+    width: 30%;
+    position: relative;
+    height: 100%;
+    @include respond-to($tablet-portrait) {
+        width: 100%;
+    }
+}
+
+.nav-logo-link__img {
+    line-height: normal;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.menu {
+    float: left;
+    width: 70%;
+    height: 100%;
+    margin: 0;
+    text-align: right;
+    @include respond-to($tablet-portrait) {
+      display: none;
+        width: 90%;
+        text-align: center;
+    }
+}
+.menu--active{
+  display: block;
+}
+.nav-logo-icon{
+  float: right;
+  color: $white-text;
+  display: none;
+  @include respond-to($tablet-portrait) {
+      display: block;
+  }
+}
+
+.nav-logo-link {
+    text-decoration: none;
+}
+
+.nav-logo-link__text {
+    text-transform: uppercase;
+}
+
+.menu-links {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-links-li {
+    line-height: 80px;
+    display: inline-block;
+    margin-left: 4%;
+    @include respond-to($tablet-portrait) {
+        display: block;
+        border-bottom: 3px solid $gray-yellow;
+        width: 100%;
+    }
+}
+
+.menu-links-li__a {
+    font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $white-text;
+    &:hover{
+      color: $gray-yellow;
+    }
+}

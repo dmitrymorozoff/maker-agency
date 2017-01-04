@@ -1,0 +1,118 @@
+.blog {
+    width: 100%;
+}
+
+.blog-posts {
+    margin-top: 3%;
+    width: 100%;
+    @include clearfix;
+}
+
+.sidemenu {
+    float: left;
+    margin-right: 3%;
+    width: 22.75%;
+    height: 300px;
+    @include respond-to($tablet-landscape) {
+        width: 100%;
+        height: auto;
+    }
+    @include respond-to($tablet-portrait) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.post-item {
+    float: left;
+    width: 22.75%;
+    height: 300px;
+    margin-right: 3%;
+    background: $dark-gray;
+    @include respond-to($tablet-portrait) {
+        width: 48.5%;
+        margin-bottom: 3%;
+
+        &:nth-child(2n+1) {
+            margin-right: 0;
+        }
+    }
+    @include respond-to($tablet-landscape) {
+        width: 31.3%;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.sidemenu-ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidemenu-ul-item {
+    @include respond-to($tablet-landscape) {
+        display: inline-block;
+        margin: 3% 3% 3% 0;
+    }
+    @include respond-to($tablet-portrait) {
+        display: inline-block;
+        margin: 3% 3% 3% 0;
+    }
+    margin-bottom: 4%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sidemenu-ul-item__link {
+    color: $gray;
+    text-decoration: none;
+    transition: 0.4s;
+
+    &:hover {
+        color: $gray-yellow;
+        text-decoration: underline;
+    }
+}
+
+.post-item-photo {
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.post-item-photo__img {
+    width: 100%;
+}
+
+.post-item-desc {
+    font-family: 'Open Sans', sans-serif;
+    height: 50%;
+    padding: 10%;
+}
+
+.post-category {
+    @include clearfix;
+    margin-bottom: 8%;
+}
+
+.post-category__date {
+    float: left;
+    font-size: 14px;
+    color: $gray;
+    letter-spacing: 1px;
+}
+
+.post-category__name {
+    float: right;
+    letter-spacing: 1px;
+    font-weight: 800;
+    color: $green;
+    font-size: 14px;
+}
+
+.post-item-desc__text {
+    line-height: 24px;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,49 @@
+.footer {
+    padding-top: 6%;
+    background-image: url('../img/footer-bg.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    padding-bottom: 6%;
+}
+
+.footer-block {
+    @include clearfix;
+}
+
+.footer-info {
+    float: left;
+    width: 70%;
+}
+
+.footer-links {
+    float: left;
+    width: 30%;
+}
+
+.footer-header {
+    margin-bottom: 6%;
+}
+
+.footer-info__desc {
+    color: $gray;
+    width: 60%;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.footer-nav {
+    list-style-type: none;
+    padding: 6% 0 0;
+    line-height: 36px;
+}
+
+.footer-nav-item__link {
+    text-decoration: none;
+    color: $gray;
+    transition: 0.4s;
+
+    &:hover {
+        color: $gray-yellow;
+        text-decoration: underline;
+    }
+}
